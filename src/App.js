@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import iconImage from './assets/globe.svg'; 
 import AazadiImg from './assets/aazadi.png'
 import LoginPage from './components/LoginForm';
+import { Routes, Route } from 'react-router-dom';
+
 
 const Container = styled.div`
   display: flex;
@@ -51,7 +53,7 @@ function App() {
       <Header>
         <Icon src={iconImage} alt="Icon" />
         <TextContainer>
-          <TextBody>DakGhar Niryat Kendra - Customer Portal</TextBody>
+          <TextBody >DakGhar Niryat Kendra - Customer Portal</TextBody>
           <TextBody>डाकघर निर्यात केंद्र - ग्राहक पोर्टल</TextBody>
         </TextContainer>
         <Aazadi src={AazadiImg} alt="Aazadi"/>
