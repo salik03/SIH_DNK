@@ -58,7 +58,7 @@ function App() {
           <TextBody >DakGhar Niryat Kendra - Customer Portal</TextBody>
           <TextBody>डाकघर निर्यात केंद्र - ग्राहक पोर्टल</TextBody>
         </TextContainer>
-        <Aazadi src={AazadiImg} alt="Aazadi"/>
+            <Aazadi src={AazadiImg} alt="Aazadi"/>
       </Header>
       <Main>
         <BookingPage />
