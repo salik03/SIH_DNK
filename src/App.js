@@ -61,7 +61,7 @@ function App() {
             <Aazadi src={AazadiImg} alt="Aazadi"/>
       </Header>
       <Main>
-        <BookingPage />
+        <RegistrationPage />
       </Main>
     </Container>
   );
