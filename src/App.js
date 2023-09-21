@@ -5,6 +5,7 @@ import AazadiImg from './assets/aazadi.png'
 import LoginPage from './components/LoginForm';
 import { Routes, Route } from 'react-router-dom';
 import RegistrationPage from './components/RegistrationForm';
+import BookingPage from './components/BookingForm';
 
 
 const Container = styled.div`
@@ -60,7 +61,7 @@ function App() {
         <Aazadi src={AazadiImg} alt="Aazadi"/>
       </Header>
       <Main>
-        <RegistrationPage />
+        <BookingPage />
       </Main>
     </Container>
   );
