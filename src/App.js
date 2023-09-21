@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import iconImage from './globe.svg'; 
-import AazadiImg from './aazadi.png'
+import iconImage from './assets/globe.svg'; 
+import AazadiImg from './assets/aazadi.png'
+import LoginPage from './components/LoginForm';
 
 const Container = styled.div`
   display: flex;
@@ -38,7 +39,7 @@ const TextContainer = styled.div`
 const TextBody = styled.p`
   font-family: 'Kruti Dev 010', sans-serif;
   font-weight: 400;
-  font-size: 1rem; 
+  font-size: 1.2rem; 
   line-height: 16.72px;
   margin-left: 20px;
   color: rgba(255, 255, 255, 1);
@@ -56,6 +57,7 @@ function App() {
         <Aazadi src={AazadiImg} alt="Aazadi"/>
       </Header>
       <Main>
+        <LoginPage />
       </Main>
     </Container>
   );

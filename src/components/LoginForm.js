@@ -1,10 +1,28 @@
-// src/components/LoginPage.js
 import React from 'react';
-import CommonTemplate from './CommonTemplate';
+import styled from 'styled-components';
+import leftImage from  '../assets/left.png';
+
+
+const LoginPageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 612px;
+  height: 753px;
+  flex-shrink: 0;
+  border-radius: 0rem 1.25rem 1.25rem 0rem;
+  background-color: #CFDFF3;
+`;
+
+const LeftImage = styled.img`
+  width: 100px;  /* Adjust the width to your preference */
+  height: auto;  /* Maintain aspect ratio */
+  margin-right: 20px;  /* Adjust the margin to your preference */
+`;
 
 const LoginPage = () => {
   return (
-    <CommonTemplate>
+    <LoginPageContainer>
       <div>
         <h2>Login</h2>
         <form>
@@ -15,7 +33,7 @@ const LoginPage = () => {
           <button type="submit">Login</button>
         </form>
       </div>
-    </CommonTemplate>
+    </LoginPageContainer>
   );
 };
 
