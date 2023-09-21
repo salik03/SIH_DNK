@@ -23,28 +23,33 @@ const Header = styled.header`
   background: rgba(25, 98, 185, 1);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 15px;
-  height: 97px;
 `;
 
 const Icon = styled.img`
-  width: 81px; 
+  width: 4vw; 
+  padding-left: 1vw;
 `;
 
 const Aazadi = styled.img`
-  width: 150px; 
+  margin-left: auto;
+  width: 8vw; 
 `;
 
 const TextContainer = styled.div`
-  flex-grow: 1;
+  display:flex;
+  flex-direction:column;
 `;
 
-const TextBody = styled.p`
-  font-family: 'Kruti Dev 010', sans-serif;
-  font-weight: 400;
-  font-size: 1.2rem; 
-  line-height: 16.72px;
+const TextBody = styled.div`
+font-family: 'Kruti Dev 010', sans-serif;
+font-size: 1.3rem; 
+margin-left: 20px;
+color: rgba(255, 255, 255, 1);
+`;
+const TextBod = styled.div`
+margin-bottom:.9vh;
+  font-family: 'League Spartan', Times;
+  font-size: 1.3rem; 
   margin-left: 20px;
   color: rgba(255, 255, 255, 1);
 `;
@@ -55,13 +60,13 @@ function App() {
       <Header>
         <Icon src={iconImage} alt="Icon" />
         <TextContainer>
-          <TextBody >DakGhar Niryat Kendra - Customer Portal</TextBody>
-          <TextBody>डाकघर निर्यात केंद्र - ग्राहक पोर्टल</TextBody>
+          <TextBod >DakGhar Niryat Kendra - Customer Portal</TextBod>
+          <TextBody >Mkd?kj fu;kZr dsanz & xkzgd iksVZy</TextBody> 
         </TextContainer>
             <Aazadi src={AazadiImg} alt="Aazadi"/>
       </Header>
       <Main>
-        <RegistrationPage />
+        <LoginPage />
       </Main>
     </Container>
   );
