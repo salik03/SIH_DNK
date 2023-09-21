@@ -32,12 +32,13 @@ const FormContainer = styled.div`
   background-color: white;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center vertically */
+  align-items: center;
+  border-radius: 0 .89vw .89vw 0
 `;
 
 const LogIn = styled.div`
 margin-top:2rem ;
-font-size: 2rem;
+font-size: 3vw;
 margin-bottom: 4rem;
 `;
 
