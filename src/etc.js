@@ -40,7 +40,7 @@ const TextBody = styled.p`
   font-weight: 400;
   font-size: 1rem; 
   line-height: 16.72px;
-  margin-left: 20px;
+  margin-left: 120px;
   color: rgba(255, 255, 255, 1);
 `;
 
