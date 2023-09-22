@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
+import { NavLink, BrowserRouter as Router } from 'react-router-dom';
+
 import leftImage from '../assets/left.png';
 import indiaPost from '../assets/IndiaPost.png';
+import RegistrationPage from './RegistrationForm';
 
 const LoginPageContainer = styled.div`
   background-color: #A5C6ED;
@@ -16,9 +19,11 @@ const ContentWrapper = styled.div`
   display: flex;
   justify-content: center;
 `;
+
 const LeftImage = styled.img`
   max-width: 40%;
 `;
+
 const IndiaPost = styled.img`
   width: 40%;
   display: block;
@@ -32,6 +37,17 @@ const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+const CreateAccount = styled(NavLink)`
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  color: #1962b9;
+  font-family: 'League Spartan';
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-decoration: none;
 `;
 
 const LogIn = styled.div`
@@ -76,36 +92,41 @@ const LoginPage = () => {
   };
 
   return (
-    <LoginPageContainer>
-      <ContentWrapper>
-        <LeftImage src={leftImage} alt="Left Image" />
-        <FormContainer>
-          <IndiaPost src={indiaPost} alt="India Post" />
-          <LogIn>Login</LogIn>
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="username">Username:</label>
-            <input
-              type="text"
-              id="username"
-              name="username"
-              value={username}
-              onChange={handleUsernameChange}
-            />
-            <br />
-            <label htmlFor="password">Password:</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              value={password}
-              onChange={handlePasswordChange}
-            />
-            <br />
-            <button type="submit">Login</button>
-          </form>
-        </FormContainer>
-      </ContentWrapper>
-    </LoginPageContainer>
+    <Router>
+      <LoginPageContainer>
+        <ContentWrapper>
+          <LeftImage src={leftImage} alt="Left Image" />
+          <FormContainer>
+            <IndiaPost src={indiaPost} alt="India Post" />
+            <LogIn>Login</LogIn>
+            <form onSubmit={handleSubmit}>
+              <label htmlFor="username">Username:</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                value={username}
+                onChange={handleUsernameChange}
+              />
+              <br />
+              <label htmlFor="password">Password:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value={password}
+                onChange={handlePasswordChange}
+              />
+              <br />
+              <button type="submit">Login</button>
+            </form>
+            <NavLink to='/registration'>
+              <button>Create Account</button>
+            </NavLink>
+          </FormContainer>
+        </ContentWrapper>
+      </LoginPageContainer>
+    </Router>
   );
 };
 
