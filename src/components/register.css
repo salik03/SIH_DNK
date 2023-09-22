@@ -1,0 +1,62 @@
+.loginInput{
+    width: 70%;
+    color: #1962B9;
+    margin: .6vw;
+    padding: .9vw;
+    font-size: 1.4vw;
+    border: 0;
+    border-radius: 1vw;
+    background-color: #1962B9;
+}
+.loginInput::placeholder{
+    font-weight: lighter;
+    color: rgba(255, 255, 255, 0.716);
+    font-size: 1.6vw;
+}
+.loginInput2{
+    width: 70%;
+    color: #1962B9;
+    margin: .6vw;
+    padding: .9vw;
+    font-size: 1.4vw;
+    border: 0;
+    border-radius: 1vw;
+    background-color: #1962B9;
+}
+.loginInput2::placeholder{
+    font-weight: lighter;
+    color: rgba(255, 255, 255, 0.716);
+    font-size: 1.6vw;
+}
+
+.leftTop{
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftTop div{
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: #1962B9;
+    margin-top: 1vw;
+    margin-right: 1vw;
+}
+
+.otpContainer{
+    width: 70%;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    margin: .6vw;
+}
+
+.otp{
+    color: #1962B9;
+    text-align: center;
+    font-size: 2vw;
+    width: 3vw;
+    height: 3.5vw;
+    border-radius: 0.8vw;
+    background-color: #BDCDE1;
+    border: 0;
+}

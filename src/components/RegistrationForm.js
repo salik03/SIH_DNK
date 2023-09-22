@@ -1,44 +1,46 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import indiaPost from '../assets/IndiaPost.png';
+import styled from 'styled-components';
+import './register.css'
 
 const RegistrationPage = () => {
   const [email, setEmail] = useState('');
   const [mobileNumber, setMobileNumber] = useState('');
 
   const containerStyle = {
+    fontFamily: 'League Spartan',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    minHeight: '100vh',
+    minHeight: '90vh',
   };
+  const IndiaPost = styled.img`
+    width: 55%;
+    display: inline-block;
+    margin-top: .2rem;
+    margin-bottom: 1.2rem;
+    padding: 0;
+  `;
 
   const mainRectangleStyle = {
-    width: '60rem',
-    height: '40rem',
-    flexShrink: 0,
+    width: '100vw',
     backgroundColor: '#1962B9',
     display: 'flex',
-    padding: '2rem',
-    boxSizing: 'border-box',
+    padding: '3vh',
+    justifyContent: 'center',
+    alignItems: 'center',
   };
 
   const innerRectangleStyle = {
-    width: '30rem',
-    height: '40rem',
-    flexShrink: 0,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    width: '35vw',
+    height: '70vh',
     borderRadius: '1.25rem',
     backgroundColor: '#E9F3FF',
     margin: '0 12px',
-  };
-
-  const otpBoxStyle = {
-    width: '2rem',
-    height: '3rem',
-    borderRadius: '0.5rem',
-    border: '1px solid #ccc',
-    margin: '0 0.3rem',
-    textAlign: 'center',
-    fontSize: '1.8rem',
   };
 
   const handleRegister = () => {
@@ -63,67 +65,83 @@ const RegistrationPage = () => {
     <div style={containerStyle}>
       <div style={mainRectangleStyle}>
         <div style={innerRectangleStyle}>
-          <form style={{ padding: '2rem' }}>
-            <h2>Register</h2>
-            <label style={{ fontSize: '1.6rem' }}>Email:</label>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              style={{ fontSize: '1.6rem', width: '100%' }}
-              required
-            />
-            <br />
-            <label style={{ fontSize: '1.6rem' }}>Mobile No:</label>
-            <input
-              type="tel"
-              placeholder="Enter your mobile number"
-              style={{ fontSize: '1.6rem', width: '100%' }}
-              required
-            />
-            <div style={{ marginTop: '1rem' }}>
-              <label style={{ fontSize: '1.6rem' }}>Enter OTP:</label>
+          <form style={{ padding: '2rem',display:'flex',flexDirection:'column',position:'relative' }}>
+            <div className = 'leftTop'>
+              <IndiaPost src={indiaPost} alt="India Post" />
+              <div>1/2</div>
+            </div>
+            <div style={{marginBottom: '1vw',fontSize: '2.3vw', color: '#1962B9', fontWeight: 'Regular'}}>Register</div>
+            <div style={{display: 'flex', flexDirection:'column',justifyContent: 'center',alignItems: 'center'}}>
+              <input
+                type="tel"
+                placeholder="email"
+                className='loginInput'
+                style={{color:'white'}}
+                required
+                />
+              <input
+                type="tel"
+                style={{backgroundColor: '#BDCDE1'}}
+                className='loginInput'
+                placeholder="mobile number"
+                required
+              />
+            </div>
+              {/* <label style={{ fontSize: '1.6rem' }}>Enter OTP:</label> */}
+            <div className='otpContainer'>
               {[...Array(6)].map((_, index) => (
                 <input
+                  className='otp'
                   key={index}
-                  style={otpBoxStyle}
                   type="text"
                   maxLength="1"
-                />
+                  />
               ))}
             </div>
-          </form>
-          <p style={{ fontSize: '1.4rem', marginTop: '1rem', marginLeft: '4rem' }}>
+          <p style={{color:'#1962B9', fontSize: '1.2vw', alignSelf:'center',marginTop:'15%' }}>
             Already have an account? Login
           </p>
+          </form>
         </div>
         <div style={innerRectangleStyle}>
-          <form style={{ padding: '2rem' }}>
-            <label style={{ fontSize: '1.6rem' }}>Username:</label>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              style={{ fontSize: '1.6rem', width: '100%' }}
-              required
-            />
-            <br />
-            <label style={{ fontSize: '1.6rem' }}>Enter Password:</label>
-            <input
-              type="tel"
-              placeholder="Enter your mobile number"
-              style={{ fontSize: '1.6rem', width: '100%' }}
-              required
-            />
-            <label style={{ fontSize: '1.6rem' }}>Re-enter Password:</label>
-            <input
-              type="tel"
-              placeholder="Enter your mobile number"
-              style={{ fontSize: '1.6rem', width: '100%' }}
-              required
-            />
-            <button type="button" style={{ fontSize: '1.6rem', marginTop: '1rem' }} onClick={handleRegister}>
-              Submit
-            </button>
-          </form>
+          <div style={{height:'100%',width:'100%',display:'flex',flexDirection:'column'}}>
+          <form style={{ padding: '2rem',display:'flex',flexDirection:'column',position:'relative' }}>
+              {/* <label style={{ fontSize: '1.6rem' }}>Username:</label> */}
+              <div style={{marginLeft: 'auto', fontSize: '1.5vw', fontWeight: 'bold', color: '#1962B9', marginTop: '1vw', marginRight: '1vw'}}>
+                <div>2/2</div>
+              </div>
+              <div style={{marginTop:'32%',display: 'flex', flexDirection:'column',alignItems:'center'}}>
+                
+                <input
+                  type="username"
+                  placeholder="username"
+                  className='loginInput2'
+                  style={{color:'white'}}
+                  required
+                  />
+                {/* <label style={{ fontSize: '1.6rem' }}>Enter Password:</label> */}
+                <input
+                  type="tel"
+                  placeholder="password"
+                  style={{backgroundColor: '#BDCDE1'}}
+                  className='loginInput2'
+                  required
+                  />
+                {/* <label style={{ fontSize: '1.6rem' }}>Re-enter Password:</label> */}
+                <input
+                  type="tel"
+                  placeholder="re-enterpassword"
+                  style={{backgroundColor: '#BDCDE1'}}
+                  className='loginInput2'
+                  required
+                  />
+                <button type="button" style={{maxWidth:'50%',border:0,padding:'4%',color:'white',fontFamily:'League Spartan',backgroundColor: '#1962B9', fontSize: '1.2vw', marginTop: '4%' }} onClick={handleRegister}>
+                  REGISTER
+                </button>
+
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
