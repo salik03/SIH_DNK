@@ -6,6 +6,8 @@ import LoginPage from './components/LoginForm';
 import { Routes, Route } from 'react-router-dom';
 import RegistrationPage from './components/RegistrationForm';
 import BookingPage from './components/BookingForm';
+import ArticleUpload from './components/ArticleListing';
+import CommonTemplate from './components/CommonTemplate';
 
 
 const Container = styled.div`
@@ -67,6 +69,7 @@ function App() {
       </Header>
       <Main>
         <RegistrationPage />
+
       </Main>
     </Container>
   );
