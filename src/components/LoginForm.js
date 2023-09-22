@@ -37,6 +37,13 @@ const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 0 .89vw .89vw 0
+`;
+
+const LogIn = styled.div`
+margin-top:2rem ;
+font-size: 3vw;
+margin-bottom: 4rem;
 `;
 
 const CreateAccount = styled(NavLink)`
@@ -50,11 +57,7 @@ const CreateAccount = styled(NavLink)`
   text-decoration: none;
 `;
 
-const LogIn = styled.div`
-  margin-top: 2rem;
-  font-size: 2rem;
-  margin-bottom: 4rem;
-`;
+
 
 const LoginPage = () => {
   const [username, setUsername] = useState('');
