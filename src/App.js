@@ -61,12 +61,12 @@ function App() {
         <Icon src={iconImage} alt="Icon" />
         <TextContainer>
           <TextBod >DakGhar Niryat Kendra - Customer Portal</TextBod>
-          <TextBody >Mkd?kj fu;kZr dsanz & xkzgd iksVZy</TextBody> 
+          <TextBody >डाकघर निर्यात केंद्र - ग्राहक पोर्टल</TextBody> 
         </TextContainer>
             <Aazadi src={AazadiImg} alt="Aazadi"/>
       </Header>
       <Main>
-        <LoginPage />
+        <RegistrationPage />
       </Main>
     </Container>
   );
