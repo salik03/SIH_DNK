@@ -13,6 +13,7 @@ def generate_random_id(length=8):
     return ''.join(random.choice(characters) for _ in range(length))
 
 
+
 # Function to register a new user
 def register_user():
     print("Registration:")
