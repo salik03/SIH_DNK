@@ -1,6 +1,20 @@
 import React, { useState } from 'react';
 
 const ContactForm = () => {
+  const addressBookData = [
+    {
+      name: 'Salik Uddin',
+      companyName: 'ABC Inc.',
+      address1: '123 Main St',
+      address2: 'Apt 101',
+      city: 'Lucknow',
+      zipCode: '226016',
+      country: 'Ind',
+      contactNumber: '123-456-7890',
+      email: 'email@example.com'
+    }
+  ];
+
   const [sendFormData, setSendFormData] = useState({
     type: '',
     name: '',
@@ -11,7 +25,7 @@ const ContactForm = () => {
     zipCode: '',
     country: '',
     contactNumber: '',
-    email: '',
+    email: ''
   });
 
   const [receiveFormData, setReceiveFormData] = useState({
@@ -24,7 +38,7 @@ const ContactForm = () => {
     zipCode: '',
     country: '',
     contactNumber: '',
-    email: '',
+    email: ''
   });
 
   const handleSendFormChange = (e) => {
@@ -35,6 +49,20 @@ const ContactForm = () => {
   const handleReceiveFormChange = (e) => {
     const { name, value } = e.target;
     setReceiveFormData({ ...receiveFormData, [name]: value });
+  };
+
+  const handleAddressBookSelect = (selectedData, formType) => {
+    if (formType === 'send') {
+      setSendFormData({
+        ...sendFormData,
+        ...selectedData
+      });
+    } else if (formType === 'receive') {
+      setReceiveFormData({
+        ...receiveFormData,
+        ...selectedData
+      });
+    }
   };
 
   return (
@@ -81,7 +109,13 @@ const ContactForm = () => {
           <label>Email:</label>
           <input type="email" name="email" value={sendFormData.email} onChange={handleSendFormChange} />
         </div>
-        
+        <div>
+          <label>Select Address from Book:</label>
+          <select onChange={() => handleAddressBookSelect(addressBookData[0], 'send')}>
+            <option value="">Select an address</option>
+            <option value="Salik">Salik</option>
+          </select>
+        </div>
         <button type="submit">Submit</button>
       </form>
 
@@ -127,8 +161,13 @@ const ContactForm = () => {
           <label>Email:</label>
           <input type="email" name="email" value={receiveFormData.email} onChange={handleReceiveFormChange} />
         </div>
-        
-
+        <div>
+          <label>Select Address from Book:</label>
+          <select onChange={() => handleAddressBookSelect(addressBookData[0], 'receive')}>
+            <option value="">Select an address</option>
+            <option value="Salik">Salik</option>
+          </select>
+        </div>
         <button type="submit">Submit</button>
       </form>
     </div>

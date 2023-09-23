@@ -70,7 +70,7 @@ function App() {
       </Header>
       <Main>
 
-        <ContactForm />
+        <BookingPage />
 
 
       </Main>
