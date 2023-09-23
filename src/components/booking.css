@@ -1,0 +1,39 @@
+.BookArt{
+    border:0;
+    font-family:'League Spartan';
+    font-size: 1.5vw;
+    color: #1962B9;
+    background-color: white;
+    border-radius: 2vw;
+    transition: ease-in-out 150ms;
+    width: 14vw;
+}
+.BookArt:hover{
+    background-color: #1962B9;
+    color: white;
+}
+
+.selectMonth{
+    display: flex;
+    font-size: 1.4vw;
+    color: #1962B9;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border:0;
+    border-radius: 2vw;
+    width: 18vw;
+    transition: ease-in-out 150ms;
+}
+
+.selectMonth:hover{
+    background-color: #1962B9;
+    color: white;
+}
+.selectMonth.svg.path{
+    fill: #1962B9; 
+    transition: ease-in-out 150ms;
+}
+.selectMonth:hover .svg.path{
+    fill: #ffffff; 
+  }
