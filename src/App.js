@@ -6,9 +6,10 @@ import LoginPage from './components/LoginForm';
 import { Routes, Route } from 'react-router-dom';
 import RegistrationPage from './components/RegistrationForm';
 import BookingPage from './components/BookingForm';
-import ArticleUpload from './components/ArticleBooking';
 import ConsignmentForm from './components/ConsignmentDetails';
 import ContactForm from './components/SenderReciever';
+import BulkUpload from './components/BulkUpload';
+import SingleUpload from './components/SingleArticleUpload';
 
 
 const Container = styled.div`
@@ -70,7 +71,7 @@ function App() {
       </Header>
       <Main>
 
-        <BookingPage />
+        <SingleUpload />
 
 
       </Main>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ArticleUpload = () => {
+const BulkUpload = () => {
   const [formData, setFormData] = useState([]);
   const [csvHeaders, setCSVHeaders] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState('');
@@ -151,4 +151,4 @@ const ArticleUpload = () => {
   );
 };
 
-export default ArticleUpload;
+export default BulkUpload;
