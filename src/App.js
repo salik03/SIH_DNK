@@ -69,7 +69,7 @@ function App() {
       </Header>
       <Main>
 
-        <ConsignmentForm />
+        <BookingPage />
 
 
       </Main>
