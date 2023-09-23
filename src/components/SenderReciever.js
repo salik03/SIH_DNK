@@ -82,8 +82,6 @@ const ContactForm = () => {
           <input type="email" name="email" value={sendFormData.email} onChange={handleSendFormChange} />
         </div>
         
-        {/* Display other form fields */}
-
         <button type="submit">Submit</button>
       </form>
 
