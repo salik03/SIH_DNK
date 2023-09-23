@@ -8,6 +8,7 @@ import RegistrationPage from './components/RegistrationForm';
 import BookingPage from './components/BookingForm';
 import ArticleUpload from './components/ArticleBooking';
 import ConsignmentForm from './components/ConsignmentDetails';
+import SRForm from './components/SenderReciever';
 
 
 const Container = styled.div`
@@ -69,7 +70,7 @@ function App() {
       </Header>
       <Main>
 
-        <ArticleUpload />
+        <SRForm />
 
 
       </Main>
