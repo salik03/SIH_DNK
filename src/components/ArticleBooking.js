@@ -3,7 +3,17 @@ import React, { useState } from 'react';
 const ArticleUpload = () => {
   const [formData, setFormData] = useState([]);
   const [csvHeaders, setCSVHeaders] = useState([]);
-  const [selectedCountry, setSelectedCountry] = useState(''); // New state for selected country
+  const [selectedCountry, setSelectedCountry] = useState('');
+  const [availabilityResult, setAvailabilityResult] = useState('');
+  const [productType, setProductType] = useState('');
+  const [grossWeight, setGrossWeight] = useState('');
+  const [insured, setInsured] = useState(false);
+
+  const getRandomAvailability = () => {
+    const availabilities = ['Available', 'Unavailable'];
+    const randomIndex = Math.floor(Math.random() * availabilities.length);
+    return availabilities[randomIndex];
+  };
 
   const handleFileUpload = (e) => {
     const file = e.target.files[0];
@@ -41,8 +51,32 @@ const ArticleUpload = () => {
   };
 
   const handleSearch = () => {
-    // Add your search logic based on the selected country
     console.log('Searching for country:', selectedCountry);
+  };
+
+  const handleCheckAvailability = () => {
+    if (selectedCountry) {
+      const availability = getRandomAvailability();
+      setAvailabilityResult(`Availability: ${availability}`);
+    } else {
+      setAvailabilityResult('');
+    }
+  };
+
+  const handleProductTypeChange = (e) => {
+    setProductType(e.target.value);
+  };
+
+  const handleGrossWeightChange = (e) => {
+    setGrossWeight(e.target.value);
+  };
+
+  const handleInsuredChange = () => {
+    setInsured(!insured);
+  };
+
+  const handleCalculate = () => {
+    console.log('Calculating...');
   };
 
   return (
@@ -54,11 +88,46 @@ const ArticleUpload = () => {
           <option value="">Select a country</option>
           <option value="USA">USA</option>
           <option value="Canada">Canada</option>
-          {/* Add more country options as needed */}
         </select>
-        <button onClick={handleSearch}>Search</button>
+        <button onClick={handleCheckAvailability}>Check</button>
       </div>
-      <form onSubmit>
+
+      <div>
+        <label htmlFor="productTypeDropdown">Product Type:</label>
+        <select id="productTypeDropdown" onChange={handleProductTypeChange} value={productType}>
+          <option value="">Select a product type</option>
+          <option value="International EMS Merchandise">International EMS Merchandise</option>
+          <option value="International EMS Document">International EMS Document</option>
+        </select>
+      </div>
+
+      <div>
+        <label htmlFor="grossWeightInput">Gross Weight:</label>
+        <input
+          type="text"
+          id="grossWeightInput"
+          placeholder="Enter gross weight"
+          value={grossWeight}
+          onChange={handleGrossWeightChange}
+        />
+      </div>
+
+      <div>
+        <label>
+          <input type="checkbox" checked={insured} onChange={handleInsuredChange} />
+          Insured
+        </label>
+      </div>
+
+      <button onClick={handleCalculate}>Calculate</button>
+
+      {availabilityResult && (
+        <div>
+          <p>{availabilityResult}</p>
+        </div>
+      )}
+
+      <form onSubmit={(e) => e.preventDefault()}>
         {formData.map((data, index) => (
           <div key={index}>
             {csvHeaders.map((header) => (
