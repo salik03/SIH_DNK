@@ -69,7 +69,7 @@ function App() {
       </Header>
       <Main>
 
-        <BookingPage />
+        <ArticleUpload />
 
 
       </Main>
