@@ -7,6 +7,7 @@ import { Routes, Route } from 'react-router-dom';
 import RegistrationPage from './components/RegistrationForm';
 import BookingPage from './components/BookingForm';
 import ArticleUpload from './components/ArticleBooking';
+import ConsignmentForm from './components/ConsignmentDetails';
 
 
 const Container = styled.div`
@@ -67,7 +68,9 @@ function App() {
             <Aazadi src={AazadiImg} alt="Aazadi"/>
       </Header>
       <Main>
-        <BookingPage />
+
+        <ConsignmentForm />
+
 
       </Main>
     </Container>
