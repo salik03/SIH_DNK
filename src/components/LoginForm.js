@@ -86,7 +86,7 @@ const LoginPage = () => {
         alert('Login failed. Please check your username and password.');
       }
     } catch (error) {
-      if (error.response && error.response.status === 401) {
+      if (error.response.status === 401) {
         alert('Check your username and password.');
       } else {
         alert('An error occurred. Please try again.');

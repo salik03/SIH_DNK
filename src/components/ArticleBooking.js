@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 const ArticleUpload = () => {
   const [formData, setFormData] = useState([]);
   const [csvHeaders, setCSVHeaders] = useState([]);
+  const [selectedCountry, setSelectedCountry] = useState(''); // New state for selected country
 
   const handleFileUpload = (e) => {
     const file = e.target.files[0];
@@ -35,34 +36,29 @@ const ArticleUpload = () => {
     setFormData(updatedFormData);
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleCountryChange = (e) => {
+    setSelectedCountry(e.target.value);
+  };
 
-    try {
-      const updatedFormData = formData.map(async (data) => {
-        const response = await fetch('http://127.0.0.1:5000/upload', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data),
-        });
-
-        const result = await response.json();
-        return { ...data, response: result.message };
-      });
-
-      const updatedDataWithResponse = await Promise.all(updatedFormData);
-      setFormData(updatedDataWithResponse);
-    } catch (error) {
-      console.error('Error:', error);
-    }
+  const handleSearch = () => {
+    // Add your search logic based on the selected country
+    console.log('Searching for country:', selectedCountry);
   };
 
   return (
     <div>
       <input type="file" accept=".csv" onChange={handleFileUpload} />
-      <form onSubmit={handleSubmit}>
+      <div>
+        <label htmlFor="countryDropdown">Search Country:</label>
+        <select id="countryDropdown" onChange={handleCountryChange} value={selectedCountry}>
+          <option value="">Select a country</option>
+          <option value="USA">USA</option>
+          <option value="Canada">Canada</option>
+          {/* Add more country options as needed */}
+        </select>
+        <button onClick={handleSearch}>Search</button>
+      </div>
+      <form onSubmit>
         {formData.map((data, index) => (
           <div key={index}>
             {csvHeaders.map((header) => (
