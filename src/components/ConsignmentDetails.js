@@ -103,11 +103,6 @@ const ConsignmentForm = () => {
             <option value="PBE IV(NON E-COMMERCE ITEMS)">PBE IV(NON E-COMMERCE ITEMS)</option>
           </select>
 
-      <div >
-        <Link to="/pieceDetail">
-          <button>Next</button>
-        </Link>
-      </div>
 
     </div>
           <select className="dDown" value={selfFilling} onChange={handleSelfFillingChange}>
@@ -116,6 +111,11 @@ const ConsignmentForm = () => {
             <option value="NO">NO</option>
           </select>
      </div>
+      <div >
+        <Link to="/pieceDetail">
+          <button className='btn'>Next</button>
+        </Link>
+      </div>
      </div>
   );
 };
