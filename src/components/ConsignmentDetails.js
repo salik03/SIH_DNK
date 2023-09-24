@@ -112,7 +112,7 @@ const ConsignmentForm = () => {
           </select>
      </div>
       <div >
-        <Link to="/pieceDetail">
+        <Link to="/sendrecieve">
           <button className='btn'>Next</button>
         </Link>
       </div>

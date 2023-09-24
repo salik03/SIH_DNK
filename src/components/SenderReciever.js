@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './sendRecieve.css'
+import { Link } from 'react-router-dom';
 
-const ContactForm = () => {
+const SenderReciever = () => {
   const addressBookData = [
     {
       name: 'Salik Uddin',
@@ -153,8 +154,13 @@ const ContactForm = () => {
   <button className="btn" type="submit">Submit</button>
   </form>
   </div>
+  <div >
+        <Link to="/pieceDetail">
+          <button className='btn'>Next</button>
+        </Link>
+      </div>
 </div>
   );
 };
 
-export default ContactForm;
+export default SenderReciever;

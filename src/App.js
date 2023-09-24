@@ -14,6 +14,7 @@ import PieceDetail from './components/PieceDetail';
 import DeclarationForm from './components/Declaration';
 import DashboardPage from './components/Dashboard';
 import Reciept from './components/Reciept';
+import SenderReciever from './components/SenderReciever';
 
 
 const Container = styled.div`
@@ -84,6 +85,7 @@ function App() {
             <Route path="/bulkUpload" element={<BulkUpload />} />
             <Route path="/singleUpload" element={<SingleUpload />} />
             <Route path="/reciept" element={<Reciept />} />
+            <Route path="/sendrecieve" element={<SenderReciever />} />
             <Route path="/pieceDetail" element={<PieceDetail />} />
             <Route path="/declaration" element={<DeclarationForm />} />
             <Route path="/dashboard" element={<DashboardPage />} />

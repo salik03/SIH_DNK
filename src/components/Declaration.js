@@ -74,7 +74,7 @@ const DeclarationForm = () => {
             We hereby declare that the contents of this postal bill of export are true and correct in every respect
           </label>
         </div>
-        <button  id="submitBtn" type="submit" disabled> <Link to="/declaration">
+        <button  id="submitBtn" type="submit" disabled> <Link to="/reciept">
           Submit
           </Link>
         </button>
