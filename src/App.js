@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import iconImage from './assets/globe.svg'; 
 import AazadiImg from './assets/aazadi.png'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LoginPage from './components/LoginForm';
-import { Routes, Route } from 'react-router-dom';
 import RegistrationPage from './components/RegistrationForm';
 import BookingPage from './components/Dashboard';
 import ConsignmentForm from './components/ConsignmentDetails';
@@ -63,23 +63,32 @@ margin-bottom:.9vh;
 
 function App() {
   return (
-    <Container>
-      <Header>
-        <Icon src={iconImage} alt="Icon" />
-        <TextContainer>
-          <TextBod >DakGhar Niryat Kendra - Customer Portal</TextBod>
-          <TextBody >डाकघर निर्यात केंद्र - ग्राहक पोर्टल</TextBody> 
-        </TextContainer>
-            <Aazadi src={AazadiImg} alt="Aazadi"/>
-      </Header>
-      <Main>
-
-        <DeclarationForm />
-
-
-      </Main>
-    </Container>
+    <Router>
+      <Container>
+        <Header>
+          <Icon src={iconImage} alt="Icon" />
+          <TextContainer>
+            <TextBod>DakGhar Niryat Kendra - Customer Portal</TextBod>
+            <TextBody>डाकघर निर्यात केंद्र - ग्राहक पोर्टल</TextBody>
+          </TextContainer>
+          <Aazadi src={AazadiImg} alt="Aazadi" />
+        </Header>
+        <Main>
+          <Routes>
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/registration" element={<RegistrationPage />} />
+            <Route path="/booking" element={<BookingPage />} />
+            <Route path="/consignment" element={<ConsignmentForm />} />
+            <Route path="/contact" element={<ContactForm />} />
+            <Route path="/bulkUpload" element={<BulkUpload />} />
+            <Route path="/singleUpload" element={<SingleUpload />} />
+            <Route path="/pieceDetail" element={<PieceDetail />} />
+            <Route path="/declaration" element={<DeclarationForm />} />
+            <Route path="/dashboard" element={<DashboardPage />} />
+          </Routes>
+        </Main>
+      </Container>
+    </Router>
   );
 }
-
 export default App;
