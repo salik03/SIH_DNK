@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect  } from 'react';
 import { Link, Router } from 'react-router-dom';
 
 const SingleUpload = () => {
@@ -7,8 +7,12 @@ const SingleUpload = () => {
   const [productType, setProductType] = useState('');
   const [grossWeight, setGrossWeight] = useState('');
   const [insured, setInsured] = useState(false);
+  const [nextButtonEnabled, setNextButtonEnabled] = useState(false);
 
-  const [calculateResult, setCalculateResult] = useState('');  
+  const [calculateResult, setCalculateResult] = useState(null);  
+  useEffect(() => {
+    setNextButtonEnabled(availabilityResult === 'Availability: Available');
+  }, [availabilityResult]);
 
   const getRandomAvailability = () => {
     const availabilities = ['Available', 'Unavailable'];
@@ -42,13 +46,14 @@ const SingleUpload = () => {
   };
 
   const handleCalculate = () => {
-    const randomAmount = Math.floor(Math.random() * 1000); 
-    setCalculateResult(randomAmount);
+    if (availabilityResult === 'Availability: Available') {
+      const randomAmount = Math.floor(Math.random() * 1000); 
+      setCalculateResult(randomAmount);
+    }
   };
 
   return (
     <div className="container">
-      {/* First Rectangle */}
       <div className="rectangle">
         <h2>Check Availability</h2>
         <label htmlFor="countryDropdown">Select Country:</label>
@@ -85,7 +90,6 @@ const SingleUpload = () => {
       </div>
       
 
-      {/* Second Rectangle */}
       <div className="rectangle">
         <h2>Tariff Calculator</h2>
         <label htmlFor="productTypeDropdown">Select Product:</label>
@@ -119,7 +123,7 @@ const SingleUpload = () => {
       </div>
       <div >
         <Link to="/consignment">
-          <button>Next</button>
+          <button disabled={!nextButtonEnabled}>Next</button>
         </Link>
       </div>
     </div>

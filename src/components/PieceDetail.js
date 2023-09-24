@@ -80,7 +80,11 @@ const PieceDetail = () => {
 
   return (
     <div className='main'>
+    <div className="centered-container">
+      <h1 className="heading-title">Piece Details</h1>
+    </div>
       <div className='line1'>
+        
         <div className='box1'>
           <div className='topT'>Product Details</div>
           <div>

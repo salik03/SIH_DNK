@@ -5,6 +5,17 @@
     margin: 2vw;
 }
 
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .heading-title {
+    text-align: center; 
+  }
+  
+
 .line1{
     display: flex;
 }
