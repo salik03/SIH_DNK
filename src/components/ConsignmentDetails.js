@@ -103,43 +103,6 @@ const ConsignmentForm = () => {
             <option value="PBE IV(NON E-COMMERCE ITEMS)">PBE IV(NON E-COMMERCE ITEMS)</option>
           </select>
 
-      <div>
-        <label>Gross Weight:</label>
-        <input type="number" value={grossWeight} onChange={handleGrossWeightChange} />
-      </div>
-
-      <div>
-        <label>Total Value (INR):</label>
-        <input type="number" value={totalValue} onChange={handleTotalValueChange} />
-      </div>
-
-      <div>
-        <label>SDR Value (INR):</label>
-        <input type="number" value={sdrValue} onChange={handleSdrValueChange} />
-      </div>
-
-      <div>
-        <label>No. of Licenses/Invoices/Certificates:</label>
-        <input type="text" value={numLicensesInvoices} onChange={handleNumLicensesInvoicesChange} />
-      </div>
-
-      <div>
-        <label>Select PBE:</label>
-        <select value={selectedPBE} onChange={handlePBEChange}>
-          <option value="">Select PBE</option>
-          <option value="PBE III(E-COMMERCE ITEMS)">PBE III(E-COMMERCE ITEMS)</option>
-          <option value="PBE IV(NON E-COMMERCE ITEMS)">PBE IV(NON E-COMMERCE ITEMS)</option>
-        </select>
-      </div>
-
-      <div>
-        <label>Self Filling:</label>
-        <select value={selfFilling} onChange={handleSelfFillingChange}>
-          <option value="">Select Self Filling</option>
-          <option value="YES">YES</option>
-          <option value="NO">NO</option>
-        </select>
-      </div>
       <div >
         <Link to="/pieceDetail">
           <button>Next</button>
