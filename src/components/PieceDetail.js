@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
+import { Link } from 'react-router-dom';
 import 'react-datepicker/dist/react-datepicker.css';
 
 const PieceDetail = () => {
@@ -367,7 +368,13 @@ const PieceDetail = () => {
           <pre>{JSON.stringify(piece, null, 2)}</pre>
         </div>
       ))}
+      <div >
+        <Link to="/declaration">
+          <button>Next</button>
+        </Link>
+      </div>
     </div>
+    
   );
 };
 

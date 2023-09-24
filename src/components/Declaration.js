@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './DeclarationForm.css'; // Import a CSS file for styling
+import './DeclarationForm.css'; 
+import { Link } from 'react-router-dom';
 
 const DeclarationForm = () => {
   const [checkboxes, setCheckboxes] = useState({
@@ -73,8 +74,9 @@ const DeclarationForm = () => {
             We hereby declare that the contents of this postal bill of export are true and correct in every respect
           </label>
         </div>
-        <button  id="submitBtn" type="submit" disabled>
+        <button  id="submitBtn" type="submit" disabled> <Link to="/declaration">
           Submit
+          </Link>
         </button>
       </form>
     </div>

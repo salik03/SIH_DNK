@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+  }
+  
+  .rectangle {
+    width: 55.3125rem;
+    height: 22.5rem;
+    flex-shrink: 0;
+    background-color: white;
+    margin-right: 20px; 
+    padding: 20px;
+  }
+  

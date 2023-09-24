@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 const ConsignmentForm = () => {
   const [productType, setProductType] = useState('');
   const [itemCategory, setItemCategory] = useState('');
@@ -129,6 +129,11 @@ const ConsignmentForm = () => {
           <option value="YES">YES</option>
           <option value="NO">NO</option>
         </select>
+      </div>
+      <div >
+        <Link to="/pieceDetail">
+          <button>Next</button>
+        </Link>
       </div>
 
     </div>
