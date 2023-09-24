@@ -10,6 +10,7 @@ import ConsignmentForm from './components/ConsignmentDetails';
 import ContactForm from './components/SenderReciever';
 import BulkUpload from './components/BulkUpload';
 import SingleUpload from './components/SingleArticleUpload';
+import PieceDetail from './components/PieceDetail';
 
 
 const Container = styled.div`
@@ -71,7 +72,7 @@ function App() {
       </Header>
       <Main>
 
-        <SingleUpload />
+        <PieceDetail />
 
 
       </Main>
