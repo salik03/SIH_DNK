@@ -79,7 +79,7 @@ const PieceDetail = () => {
   return (
     <div>
       <div>
-        <h2>Product Details Form</h2>
+        <h2>Piece Details Form</h2>
         <div>
           <label>Quantity:</label>
           <input
