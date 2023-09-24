@@ -3,6 +3,7 @@ import axios from 'axios';
 import indiaPost from '../assets/IndiaPost.png';
 import styled from 'styled-components';
 import './register.css'
+import { Link } from 'react-router-dom';
 
 const RegistrationPage = () => {
   const [email, setEmail] = useState('');
@@ -87,7 +88,7 @@ const RegistrationPage = () => {
                 required
               />
             </div>
-              {/* <label style={{ fontSize: '1.6rem' }}>Enter OTP:</label> */}
+              <label style={{marginBottom: '1vw',fontSize: '1.6vw', color: '#1962B9', fontWeight: 'Regular', alignSelf: 'center'}}>Enter OTP:</label>
             <div className='otpContainer'>
               {[...Array(6)].map((_, index) => (
                 <input
@@ -98,9 +99,9 @@ const RegistrationPage = () => {
                   />
               ))}
             </div>
-          <p style={{color:'#1962B9', fontSize: '1.2vw', alignSelf:'center',marginTop:'15%' }}>
-            Already have an account? Login
-          </p>
+            <p style={{ color: '#1962B9', fontSize: '1.2vw', alignSelf: 'center', marginTop: '15%' }}>
+              Already have an account? <Link to="/login">Login</Link> 
+              </p>
           </form>
         </div>
         <div style={innerRectangleStyle}>

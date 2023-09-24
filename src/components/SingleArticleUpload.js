@@ -13,16 +13,8 @@ const SingleUpload = () => {
     return availabilities[randomIndex];
   };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-  };
-
   const handleCountryChange = (e) => {
     setSelectedCountry(e.target.value);
-  };
-
-  const handleSearch = () => {
-    console.log('Searching for country:', selectedCountry);
   };
 
   const handleCheckAvailability = () => {
@@ -97,8 +89,6 @@ const SingleUpload = () => {
         </div>
       )}
 
-      <form onSubmit={(e) => e.preventDefault()}>
-      </form>
     </div>
   );
 };
