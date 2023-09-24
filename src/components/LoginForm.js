@@ -41,6 +41,7 @@ const FormContainer = styled.div`
 `;
 
 const LogIn = styled.div`
+color: #1962b9;
 margin-top:2rem ;
 font-size: 3vw;
 margin-bottom: 4rem;
@@ -101,29 +102,28 @@ const LoginPage = () => {
           <FormContainer>
             <IndiaPost src={indiaPost} alt="India Post" />
             <LogIn>Login</LogIn>
-            <form onSubmit={handleSubmit}>
-              <label htmlFor="username">Username:</label>
+            <form style={{display:'flex',flexDirection:'column',alignItems:'center'}}onSubmit={handleSubmit}>
               <input
                 type="text"
                 id="username"
                 name="username"
                 value={username}
                 onChange={handleUsernameChange}
+                placeholder='username'
+                style={{marginBottom:'1vh'}}
               />
-              <br />
-              <label htmlFor="password">Password:</label>
               <input
+                placeholder='password'
                 type="password"
                 id="password"
                 name="password"
                 value={password}
                 onChange={handlePasswordChange}
               />
-              <br />
-              <button type="submit">Login</button>
+              <button style = {{fontSize:'1vw', padding:'1vw',backgroundColor:'#1962b9',color:'#ffffff',border:'0',width:'50%',marginTop:'1.3vh'}} type="submit">Login</button>
             </form>
             <NavLink to='/registration'>
-              <button>Create Account</button>
+              <button style = {{fontSize:'.8vw',padding:'.8vw',backgroundColor:'#1962b9',color:'#ffffff',border:'0', marginTop:'3vh'}}>Create Account</button>
             </NavLink>
           </FormContainer>
         </ContentWrapper>
