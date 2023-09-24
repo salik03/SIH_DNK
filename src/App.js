@@ -11,6 +11,7 @@ import ContactForm from './components/SenderReciever';
 import BulkUpload from './components/BulkUpload';
 import SingleUpload from './components/SingleArticleUpload';
 import PieceDetail from './components/PieceDetail';
+import DeclarationForm from './components/Declaration';
 
 
 const Container = styled.div`
@@ -72,7 +73,7 @@ function App() {
       </Header>
       <Main>
 
-        <PieceDetail />
+        <DeclarationForm />
 
 
       </Main>
