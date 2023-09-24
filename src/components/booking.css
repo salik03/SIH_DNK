@@ -36,4 +36,23 @@
 }
 .selectMonth:hover .svg.path{
     fill: #ffffff; 
-  }
+}
+
+.dropdown{
+    margin-left: 1vw;
+    margin-right: 30vw;
+    padding: 2vw;
+    display: flex;
+    justify-content: space-between;
+    width: 18%;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    border-radius: .8vw;
+}
+.dropdown-item{
+    font-size: 1vw;
+    text-decoration: none;
+    background-color:#1962B9;
+    padding: 1vw;
+    color: #ffffff;
+}
