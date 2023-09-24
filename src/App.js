@@ -5,13 +5,14 @@ import AazadiImg from './assets/aazadi.png'
 import LoginPage from './components/LoginForm';
 import { Routes, Route } from 'react-router-dom';
 import RegistrationPage from './components/RegistrationForm';
-import BookingPage from './components/BookingForm';
+import BookingPage from './components/Dashboard';
 import ConsignmentForm from './components/ConsignmentDetails';
 import ContactForm from './components/SenderReciever';
 import BulkUpload from './components/BulkUpload';
 import SingleUpload from './components/SingleArticleUpload';
 import PieceDetail from './components/PieceDetail';
 import DeclarationForm from './components/Declaration';
+import DashboardPage from './components/Dashboard';
 
 
 const Container = styled.div`

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './booking.css'
 
 
-const BookingPage = () => {
+const DashboardPage = () => {
   const [showBookArticleForm, setShowBookArticleForm] = useState(false);
   const [showMonthDropdown, setShowMonthDropdown] = useState(false);
 
@@ -28,4 +28,4 @@ const BookingPage = () => {
   );
 };
 
-export default BookingPage;
+export default DashboardPage;
