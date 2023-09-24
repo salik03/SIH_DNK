@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-=======
 import './cons.css'
 
->>>>>>> c00f7a058c42efe8acb96f368311b2e929d2b8ca
 const ConsignmentForm = () => {
   const [productType, setProductType] = useState('');
   const [itemCategory, setItemCategory] = useState('');
@@ -106,7 +103,6 @@ const ConsignmentForm = () => {
             <option value="PBE IV(NON E-COMMERCE ITEMS)">PBE IV(NON E-COMMERCE ITEMS)</option>
           </select>
 
-<<<<<<< HEAD
       <div>
         <label>Gross Weight:</label>
         <input type="number" value={grossWeight} onChange={handleGrossWeightChange} />
@@ -151,7 +147,6 @@ const ConsignmentForm = () => {
       </div>
 
     </div>
-=======
           <select className="dDown" value={selfFilling} onChange={handleSelfFillingChange}>
             <option value="" disabled hidden>Select Self Filling</option>
             <option value="YES">YES</option>
@@ -159,8 +154,6 @@ const ConsignmentForm = () => {
           </select>
      </div>
      </div>
-  </div>
->>>>>>> c00f7a058c42efe8acb96f368311b2e929d2b8ca
   );
 };
 
