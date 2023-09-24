@@ -42,7 +42,7 @@ const SingleUpload = () => {
   };
 
   const handleCalculate = () => {
-    const randomAmount = Math.floor(Math.random() * 1000); // Adjust this range as needed
+    const randomAmount = Math.floor(Math.random() * 1000); 
     setCalculateResult(randomAmount);
   };
 
@@ -56,6 +56,25 @@ const SingleUpload = () => {
           <option value="">Select a country</option>
           <option value="USA">USA</option>
           <option value="Canada">Canada</option>
+          <option value="United Kingdom">United Kingdom</option>
+          <option value="Australia">Australia</option>
+          <option value="Germany">Germany</option>
+          <option value="France">France</option>
+          <option value="Japan">Japan</option>
+          <option value="Italy">Italy</option>
+          <option value="Spain">Spain</option>
+          <option value="Brazil">Brazil</option>
+          <option value="Mexico">Mexico</option>
+          <option value="South Korea">South Korea</option>
+          <option value="Russia">Russia</option>
+          <option value="China">China</option>
+          <option value="South Africa">South Africa</option>
+          <option value="Argentina">Argentina</option>
+          <option value="Nigeria">Nigeria</option>
+          <option value="Egypt">Egypt</option>
+          <option value="Greece">Greece</option>
+          <option value="Thailand">Thailand</option>
+          <option value="Sweden">Sweden</option>
         </select>
         <button onClick={handleCheckAvailability}>Check</button>
         {availabilityResult && (
@@ -74,6 +93,10 @@ const SingleUpload = () => {
           <option value="">Select a product type</option>
           <option value="International EMS Merchandise">International EMS Merchandise</option>
           <option value="International EMS Document">International EMS Document</option>
+          <option value="International Regd. Small Packet">International Regd. Small Packet</option>
+          <option value="International Air Parcel">International Air Parcel</option>
+          <option value="International RegdL. Letter">International RegdL. Letter</option>
+          <option value="International Tracked Packet Service">International Tracked Packet Service</option>
         </select>
         <label htmlFor="grossWeightInput">Gross Weight:</label>
         <input
