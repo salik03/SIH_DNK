@@ -1,0 +1,67 @@
+.mPart{
+    display: flex;
+    justify-content: center;
+    padding: 5vw;
+}
+
+.tOP{
+    color: #1962B9;
+    font-weight: bold;
+    font-size: 2vw;
+    margin-bottom: 2vh;
+}
+
+.send{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    width: 30%;
+    border-radius: 1vw;
+    padding: 2vw;
+    background-color: white;
+    margin-right: 2vw;
+}
+.reci{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    width: 30%;
+    border-radius: 1vw;
+    padding: 2vw;
+    background-color: white;
+    margin-left: 2vw;
+}
+
+input {
+    background-color: white; 
+    border: 1px solid #ccc; 
+    padding: 10px;
+    font-size: 16px; 
+}
+
+/* Style the placeholder text */
+input::placeholder {
+    color: #1962B9; 
+}
+
+.btn{
+    margin-top: 2vh;
+    background-color: #1962B9; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.sel{
+    margin-top: 2vw;
+    padding:.2vw;
+    font-weight: bold;
+    font-size: 1vw;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    color: #1962B9;
+}

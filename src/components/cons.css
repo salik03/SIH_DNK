@@ -1,0 +1,44 @@
+.part{
+    border-radius: 2vw;
+    margin: 5%;
+    background-color: white;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading{
+    margin:-5% 5% 5% 5%;
+    font-size: 3vw;
+    font-weight: bold;
+    color: #1962B9;
+}
+
+.Line1{
+    display: flex;
+    margin: 2vw;
+}
+.Line2{
+    margin: 2vw;
+    display: flex;
+}
+.Line3{
+    margin: 2vw;
+    display: flex;
+}
+
+.dDown{
+    background-color: #ffffff;
+    border: .2vh solid #BDCDE1;
+    font-size: 1.4vw;
+    color: #1962B9;
+    padding: 8px 20px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.dDown::placeholder{
+    color: #1961b99f;
+}

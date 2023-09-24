@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './sendRecieve.css'
 
 const ContactForm = () => {
   const addressBookData = [
@@ -66,111 +67,93 @@ const ContactForm = () => {
   };
 
   return (
-    <div style={{ display: 'flex' }}>
-      <form>
-        <h2>Send</h2>
+<div className='mPart'>
+  <div className= "send">
+    <form>
+      <div className='tOP' >Send</div>
         <div>
-          <label>Type:</label>
-          <input type="text" name="type" value={sendFormData.type} onChange={handleSendFormChange} />
+          <input className="inpF" placeholder="Type" type="text" name="type" value={sendFormData.type} onChange={handleSendFormChange} />
         </div>
         <div>
-          <label>Name:</label>
-          <input type="text" name="name" value={sendFormData.name} onChange={handleSendFormChange} />
+          <input className="inpF" placeholder="Name" type="text" name="name" value={sendFormData.name} onChange={handleSendFormChange} />
         </div>
         <div>
-          <label>Company/House Name:</label>
-          <input type="text" name="companyName" value={sendFormData.companyName} onChange={handleSendFormChange} />
+          <input className="inpF" placeholder="Company/House Name" type="text" name="companyName" value={sendFormData.companyName} onChange={handleSendFormChange} />
         </div>
         <div>
-          <label>Address 1:</label>
-          <input type="text" name="address1" value={sendFormData.address1} onChange={handleSendFormChange} />
+          <input className="inpF" placeholder="Address 1" type="text" name="address1" value={sendFormData.address1} onChange={handleSendFormChange} />
         </div>
         <div>
-          <label>Address 2:</label>
-          <input type="text" name="address2" value={sendFormData.address2} onChange={handleSendFormChange} />
+          <input className="inpF" placeholder="Address 2" type="text" name="address2" value={sendFormData.address2} onChange={handleSendFormChange} />
         </div>
         <div>
-          <label>Select City:</label>
-          <input type="text" name="city" value={sendFormData.city} onChange={handleSendFormChange} />
+          <input className="inpF" placeholder="Select City" type="text" name="city" value={sendFormData.city} onChange={handleSendFormChange} />
         </div>
         <div>
-          <label>Zip Code:</label>
-          <input type="text" name="zipCode" value={sendFormData.zipCode} onChange={handleSendFormChange} />
+          <input className="inpF" placeholder="Zip Code" type="text" name="zipCode" value={sendFormData.zipCode} onChange={handleSendFormChange} />
         </div>
         <div>
-          <label>Country:</label>
-          <input type="text" name="country" value={sendFormData.country} onChange={handleSendFormChange} />
+          <input className="inpF" placeholder="Country" type="text" name="country" value={sendFormData.country} onChange={handleSendFormChange} />
         </div>
         <div>
-          <label>Contact No:</label>
-          <input type="text" name="contactNumber" value={sendFormData.contactNumber} onChange={handleSendFormChange} />
+          <input className="inpF" placeholder="Contact No" type="text" name="contactNumber" value={sendFormData.contactNumber} onChange={handleSendFormChange} />
         </div>
         <div>
-          <label>Email:</label>
-          <input type="email" name="email" value={sendFormData.email} onChange={handleSendFormChange} />
+          <input className="inpF" placeholder="Email" type="email" name="email" value={sendFormData.email} onChange={handleSendFormChange} />
         </div>
         <div>
-          <label>Select Address from Book:</label>
-          <select onChange={() => handleAddressBookSelect(addressBookData[0], 'send')}>
-            <option value="">Select an address</option>
+          <select className="sel" onChange={() => handleAddressBookSelect(addressBookData[0], 'send')}>
+            <option value="" disabled selected>Select From Book</option>
             <option value="Salik">Salik</option>
           </select>
         </div>
-        <button type="submit">Submit</button>
-      </form>
+      <button className="btn" type="submit">Submit</button>
+    </form>
+  </div>
 
-      <form>
-        <h2>Receive</h2>
-        <div>
-          <label>Type:</label>
-          <input type="text" name="type" value={receiveFormData.type} onChange={handleReceiveFormChange} />
-        </div>
-        <div>
-          <label>Name:</label>
-          <input type="text" name="name" value={receiveFormData.name} onChange={handleReceiveFormChange} />
-        </div>
-        <div>
-          <label>Company/House Name:</label>
-          <input type="text" name="companyName" value={receiveFormData.companyName} onChange={handleReceiveFormChange} />
-        </div>
-        <div>
-          <label>Address 1:</label>
-          <input type="text" name="address1" value={receiveFormData.address1} onChange={handleReceiveFormChange} />
-        </div>
-        <div>
-          <label>Address 2:</label>
-          <input type="text" name="address2" value={receiveFormData.address2} onChange={handleReceiveFormChange} />
-        </div>
-        <div>
-          <label>Select City:</label>
-          <input type="text" name="city" value={receiveFormData.city} onChange={handleReceiveFormChange} />
-        </div>
-        <div>
-          <label>Zip Code:</label>
-          <input type="text" name="zipCode" value={receiveFormData.zipCode} onChange={handleReceiveFormChange} />
-        </div>
-        <div>
-          <label>Country:</label>
-          <input type="text" name="country" value={receiveFormData.country} onChange={handleReceiveFormChange} />
-        </div>
-        <div>
-          <label>Contact No:</label>
-          <input type="text" name="contactNumber" value={receiveFormData.contactNumber} onChange={handleReceiveFormChange} />
-        </div>
-        <div>
-          <label>Email:</label>
-          <input type="email" name="email" value={receiveFormData.email} onChange={handleReceiveFormChange} />
-        </div>
-        <div>
-          <label>Select Address from Book:</label>
-          <select onChange={() => handleAddressBookSelect(addressBookData[0], 'receive')}>
-            <option value="">Select an address</option>
-            <option value="Salik">Salik</option>
-          </select>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+  <div className='reci'>
+  <form>
+  <div className='tOP' >Receive</div>
+  <div>
+  <input placeholder="Type" type="text" name="type" value={receiveFormData.type} onChange={handleReceiveFormChange} />
+  </div>
+  <div>
+  <input placeholder="Name" type="text" name="name" value={receiveFormData.name} onChange={handleReceiveFormChange} />
+  </div>
+  <div>
+  <input placeholder="Company/House Name" type="text" name="companyName" value={receiveFormData.companyName} onChange={handleReceiveFormChange} />
+  </div>
+  <div>
+  <input placeholder="Address 1" type="text" name="address1" value={receiveFormData.address1} onChange={handleReceiveFormChange} />
+  </div>
+  <div>
+  <input placeholder="Address 2" type="text" name="address2" value={receiveFormData.address2} onChange={handleReceiveFormChange} />
+  </div>
+  <div>
+  <input placeholder="Select City" type="text" name="city" value={receiveFormData.city} onChange={handleReceiveFormChange} />
+  </div>
+  <div>
+  <input placeholder="Zip Code" type="text" name="zipCode" value={receiveFormData.zipCode} onChange={handleReceiveFormChange} />
+  </div>
+  <div>
+  <input placeholder="Country" type="text" name="country" value={receiveFormData.country} onChange={handleReceiveFormChange} />
+  </div>
+  <div>
+  <input placeholder="Contact No" type="text" name="contactNumber" value={receiveFormData.contactNumber} onChange={handleReceiveFormChange} />
+  </div>
+  <div>
+  <input placeholder="Email" type="email" name="email" value={receiveFormData.email} onChange={handleReceiveFormChange} />
+  </div>
+  <div>
+  <select className="sel" onChange={() => handleAddressBookSelect(addressBookData[0], 'receive')}>
+  <option value="" disabled selected>Select from Book</option>
+  <option value="Salik">Salik</option>
+  </select>
+  </div>
+  <button className="btn" type="submit">Submit</button>
+  </form>
+  </div>
+</div>
   );
 };
 

@@ -95,6 +95,7 @@ const LoginPage = () => {
   };
 
   return (
+    <Router>
       <LoginPageContainer>
         <ContentWrapper>
           <LeftImage src={leftImage} alt="Left Image" />
@@ -128,6 +129,7 @@ const LoginPage = () => {
           </FormContainer>
         </ContentWrapper>
       </LoginPageContainer>
+    </Router>
   );
 };
 
