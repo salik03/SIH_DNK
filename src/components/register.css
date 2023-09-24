@@ -45,12 +45,11 @@
 .otpContainer{
     width: 70%;
     display: flex;
-    align-self: center;
-    justify-content: space-between;
     margin: .6vw;
 }
 
 .otp{
+    margin: .1vw;
     color: #1962B9;
     text-align: center;
     font-size: 2vw;

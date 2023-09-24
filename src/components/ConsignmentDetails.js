@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
+=======
+import './cons.css'
+
+>>>>>>> c00f7a058c42efe8acb96f368311b2e929d2b8ca
 const ConsignmentForm = () => {
   const [productType, setProductType] = useState('');
   const [itemCategory, setItemCategory] = useState('');
@@ -53,46 +58,55 @@ const ConsignmentForm = () => {
   };
 
   return (
-    <div className="consignment-form">
+    <div className="part">
+      <div className='heading'>Consignment Details</div>
       <div>
-        <label>Product Type:</label>
-        <select value={productType} onChange={handleProductTypeChange}>
-          <option value="">Select Product Type</option>
-          <option value="International EMS Merchandise">International EMS Merchandise</option>
-          <option value="International EMS Document">International EMS Document</option>
-          <option value="International Regd. Small Packet">International Regd. Small Packet</option>
-          <option value="International Air Parcel">International Air Parcel</option>
-          <option value="International RegdL. Letter">International RegdL. Letter</option>
-          <option value="International Tracked Packet Service">International Tracked Packet Service</option>
-        </select>
+      <div className='Line1'>
+          <select className="dDown" value={productType} onChange={handleProductTypeChange}>
+            <option value="" disabled hidden>Select Product Type</option>
+            <option value="International EMS Merchandise">International EMS Merchandise</option>
+            <option value="International EMS Document">International EMS Document</option>
+            <option value="International Regd. Small Packet">International Regd. Small Packet</option>
+            <option value="International Air Parcel">International Air Parcel</option>
+            <option value="International RegdL. Letter">International RegdL. Letter</option>
+            <option value="International Tracked Packet Service">International Tracked Packet Service</option>
+          </select>
+
+          <select className="dDown" value={itemCategory} onChange={handleItemCategoryChange}>
+            <option value="" disabled hidden>Select Item Category</option>
+            <option value="Commercial Sample">Commercial Sample</option>
+            <option value="Returned Goods">Returned Goods</option>
+            <option value="Sale of Goods">Sale of Goods</option>
+            <option value="Others">Others</option>
+          </select>
+      </div>
+      <div className='Line2'>
+          <input className="dDown" type="number" placeholder="No of items in consignment" value={numTypesOfItems} onChange={handleNumTypesOfItemsChange} />
+
+          <input className="dDown" placeholder='Gross Weight' type="number" value={grossWeight} onChange={handleGrossWeightChange} />
+
+          <input className="dDown" placeholder='Total Value (INR)' type="number" value={totalValue} onChange={handleTotalValueChange} />
+
+          <input className="dDown" placeholder='SDR Value (INR)' type="number" value={sdrValue} onChange={handleSdrValueChange} />
       </div>
 
-      <div>
-        <label>Select Category of Item:</label>
-        <select value={itemCategory} onChange={handleItemCategoryChange}>
-          <option value="">Select Item Category</option>
-          <option value="Commercial Sample">Commercial Sample</option>
-          <option value="Returned Goods">Returned Goods</option>
-          <option value="Sale of Goods">Sale of Goods</option>
-          <option value="Others">Others</option>
-        </select>
-      </div>
+      <div className='Line3'>
+          <select className="dDown" value={instructions} onChange={handleInstructionsChange}>
+            <option value="">Non-Delivery case Instructions </option>
+            <option value="Abandoned">Abandoned</option>
+            <option value="RTS - Priority">RTS - Priority</option>
+            <option value="RTS - Non Priority">RTS - Non Priority</option>
+          </select>
 
-      <div>
-        <label>Instructions in case of Non-Delivery:</label>
-        <select value={instructions} onChange={handleInstructionsChange}>
-          <option value="">Select Instructions</option>
-          <option value="Abandoned">Abandoned</option>
-          <option value="RTS - Priority">RTS - Priority</option>
-          <option value="RTS - Non Priority">RTS - Non Priority</option>
-        </select>
-      </div>
+          <input className="dDown" placeholder='No. of Licenses/Invoices/Certificates' type="text" value={numLicensesInvoices} onChange={handleNumLicensesInvoicesChange} />
 
-      <div>
-        <label>No. of Types of items in Consignment:</label>
-        <input type="number" value={numTypesOfItems} onChange={handleNumTypesOfItemsChange} />
-      </div>
+          <select className="dDown" value={selectedPBE} onChange={handlePBEChange}>
+            <option value="" disabled hidden>Select PBE</option>
+            <option value="PBE III(E-COMMERCE ITEMS)">PBE III(E-COMMERCE ITEMS)</option>
+            <option value="PBE IV(NON E-COMMERCE ITEMS)">PBE IV(NON E-COMMERCE ITEMS)</option>
+          </select>
 
+<<<<<<< HEAD
       <div>
         <label>Gross Weight:</label>
         <input type="number" value={grossWeight} onChange={handleGrossWeightChange} />
@@ -137,6 +151,16 @@ const ConsignmentForm = () => {
       </div>
 
     </div>
+=======
+          <select className="dDown" value={selfFilling} onChange={handleSelfFillingChange}>
+            <option value="" disabled hidden>Select Self Filling</option>
+            <option value="YES">YES</option>
+            <option value="NO">NO</option>
+          </select>
+     </div>
+     </div>
+  </div>
+>>>>>>> c00f7a058c42efe8acb96f368311b2e929d2b8ca
   );
 };
 
