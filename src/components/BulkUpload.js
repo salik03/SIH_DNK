@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const BulkUpload = () => {
-  const [jsonContent, setJsonContent] = useState(null);
+  const [csvContent, setCsvContent] = useState(null);
 
   const handleFileUpload = (event) => {
     const file = event.target.files[0];
@@ -9,40 +10,51 @@ const BulkUpload = () => {
 
     reader.onload = (e) => {
       const content = e.target.result;
-      const jsonData = csvToJson(content);
-      setJsonContent(jsonData);
+      setCsvContent(content);
     };
 
     reader.readAsText(file);
   };
 
-  const csvToJson = (csv) => {
-    const lines = csv.split('\n');
-    const result = [];
+  const getRandomColor = () => {
+    const colors = ['red', 'lightgreen'];
+    const randomIndex = Math.floor(Math.random() * colors.length);
+    return colors[randomIndex];
+  };
 
-    const headers = lines[0].split(',');
+  const renderCsvAsTable = () => {
+    if (!csvContent) return null;
 
-    for (let i = 1; i < lines.length; i++) {
-      const data = lines[i].split(',');
-      const obj = {};
+    const lines = csvContent.split('\n');
 
-      for (let j = 0; j < headers.length; j++) {
-        obj[headers[j]] = data[j];
-      }
-
-      result.push(obj);
-    }
-
-    return JSON.stringify(result, null, 2);
+    return (
+      <table>
+        <tbody>
+          {lines.map((line, index) => {
+            const data = line.split(',');
+            const rowColor = getRandomColor();
+            return (
+              <tr key={index} style={{ backgroundColor: rowColor }}>
+                {data.map((cell, cellIndex) => (
+                  <td key={cellIndex}>{cell}</td>
+                ))}
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    );
   };
 
   return (
     <div>
       <input type="file" accept=".csv" onChange={handleFileUpload} />
-      <div>
-        <pre>{jsonContent}</pre>
-      </div>
+      <div>{renderCsvAsTable()}</div>
+      <NavLink to='/declaration'>
+              <button style = {{fontSize:'.8vw',padding:'.8vw',backgroundColor:'Green',color:'#ffffff',border:'0', marginTop:'3vh'}}>Save</button>
+          </NavLink>
     </div>
+
   );
 };
 

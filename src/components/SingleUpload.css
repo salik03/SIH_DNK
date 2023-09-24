@@ -1,13 +1,103 @@
+/* Styling for Check Availability and Tariff Calculator rectangles */
+.rectangle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  border-radius: 1vw;
+  padding: 2vw;
+  background-color: white;
+  margin: 2vw;
+}
+
+/* Styling for the headings inside rectangles */
+.rectangle h2 {
+  color: #1962B9;
+  font-weight: bold;
+  font-size: 2vw;
+  margin-bottom: 2vh;
+}
+
+/* Styling for labels */
+.rectangle label {
+  font-weight: bold;
+  font-size: 1vw;
+  margin-top: 1vh;
+}
+
+/* Styling for select elements */
+.rectangle select {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 1vh;
+  width: 100%;
+}
+
+/* Styling for input elements */
+.rectangle input[type="text"] {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 1vh;
+  width: 100%;
+}
+
+/* Styling for the "Check" and "Calculate" buttons */
+.rectangle button {
+  margin-top: 2vh;
+  background-color: #1962B9;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+/* Styling for the checkbox label */
+.rectangle label input[type="checkbox"] {
+  margin-right: 0.5vw;
+}
+
+/* Styling for the Next button */
+.container button {
+  margin-top: 2vh;
+  background-color: #1962B9;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+/* Styling for the availability result and total amount */
+.rectangle p {
+  color: #1962B9;
+  font-weight: bold;
+  font-size: 1.5vw;
+  margin-top: 2vh;
+}
+
+/* Styling for the select dropdown placeholder text */
+.rectangle select::placeholder {
+  color: #1962B9;
+}
+
+/* Additional styling for the "Next" button */
 .container {
-    display: flex;
-  }
-  
-  .rectangle {
-    width: 55.3125rem;
-    height: 22.5rem;
-    flex-shrink: 0;
-    background-color: white;
-    margin-right: 20px; 
-    padding: 20px;
-  }
-  
+  text-align: center;
+}
+
+/* Styling for the main container */
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
