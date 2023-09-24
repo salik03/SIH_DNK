@@ -45,8 +45,6 @@
 .otpContainer{
     width: 70%;
     display: flex;
-    align-self: center;
-    justify-content: space-between;
     margin: .6vw;
 }
 
