@@ -53,6 +53,14 @@ const BulkUpload = () => {
       <NavLink to='/declaration'>
               <button style = {{fontSize:'.8vw',padding:'.8vw',backgroundColor:'Green',color:'#ffffff',border:'0', marginTop:'3vh'}}>Save</button>
           </NavLink>
+          <a 
+        href="https://docs.google.com/spreadsheets/d/1J4bGxcogRDO49TfGW7bAR8bn6M70tW78/edit?usp=sharing&ouid=100733601089450328957&rtpof=true&sd=true"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="download-button"
+      >
+        Download Excel Template
+      </a>
     </div>
 
   );

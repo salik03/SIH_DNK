@@ -1,5 +1,6 @@
 import React, { useState, useEffect  } from 'react';
 import { Link, Router } from 'react-router-dom';
+import './SingleUpload.css'
 
 const SingleUpload = () => {
   const [selectedCountry, setSelectedCountry] = useState('');
@@ -122,7 +123,7 @@ const SingleUpload = () => {
         )}
       </div>
       <div >
-        <Link to="/consignment">
+        <Link to="/consignment" className=''>
           <button disabled={!nextButtonEnabled}>Next</button>
         </Link>
       </div>

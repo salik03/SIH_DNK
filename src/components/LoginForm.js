@@ -120,7 +120,9 @@ const LoginPage = () => {
                 value={password}
                 onChange={handlePasswordChange}
               />
-              <button style = {{fontSize:'1vw', padding:'1vw',backgroundColor:'#1962b9',color:'#ffffff',border:'0',width:'50%',marginTop:'1.3vh'}} type="submit">Login</button>
+              <NavLink to='/dashboard'>
+              <button style = {{fontSize:'1vw', padding:'1vw',backgroundColor:'#1962b9',color:'#ffffff',border:'0',width:'100%',marginTop:'1.3vh'}} >Login</button>
+              </NavLink>
             </form>
             <NavLink to='/registration'>
               <button style = {{fontSize:'.8vw',padding:'.8vw',backgroundColor:'#1962b9',color:'#ffffff',border:'0', marginTop:'3vh'}}>Create Account</button>

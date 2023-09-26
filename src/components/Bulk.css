@@ -1,0 +1,61 @@
+/* Styling for the main container */
+.container {
+    text-align: center;
+    margin-top: 2rem;
+    position: relative; /* Position relative for absolute positioning */
+  }
+  
+  /* Styling for the file input */
+  input[type="file"] {
+    display: none;
+  }
+  
+  .label-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  /* Styling for the custom file input button */
+  .custom-file-input {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1962B9;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 1rem;
+  }
+  
+  /* Styling for the pre element displaying JSON content */
+  pre {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    font-family: monospace;
+    text-align: left;
+    overflow-x: auto;
+  }
+  
+  /* Styling for the "Download Excel Template" button */
+  .download-button {
+    position: absolute;
+    bottom: -570px; /* Adjust as needed to position the button */
+    right: 10px; /* Adjust as needed to position the button */
+    background-color: #1962B9;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  /* Hover effect for the button */
+  .download-button:hover {
+    background-color: #144a87; /* Change the color on hover */
+  }
